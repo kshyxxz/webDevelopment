@@ -1,0 +1,12 @@
+{
+    "name": "kshitiz",
+    "age": 20,
+    "isProgrammer": true,
+    "languages": ["C","C++","Python"],
+    "friends": [{
+        "name": "roman",
+        "age": 21,
+        "isProgrammer": false 
+    }
+    ]
+}
