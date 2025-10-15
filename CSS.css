@@ -1,30 +1,52 @@
 /* CSS for most frequently used HTML tags and their common attributes */
 
-1. Inline CSS
+/* 1. Inline CSS
+
    <element style="property: value;">
 
-2. Internal CSS
+*/
+
+/* 2. Internal CSS
+
     <style>
-         /* CSS rules here */
+         CSS rules here
     </style>
-    
-3. External CSS (linking to a .css file)
+
+*/
+
+/* 3. External CSS (linking to a .css file)
+
     <link rel="stylesheet" href="path/to/yourfile.css">
+    
+*/
 
-/* Element Selector */
-element {
-    /* Styles for all <element> tags */
-}
 
-/* Class Selector */
-.classname {
-    /* Styles for all elements with class="classname" */
-}
+/* Selectors */
 
-/* ID Selector */
-#idname {
-    /* Styles for the element with id="idname" */
-}
+/* Element Selector 
+
+        element {
+            /* Styles for all <element> tags */
+        }
+
+*/
+
+/* Class Selector 
+
+        .classname {
+            /* Styles for all elements with class="classname" */
+        }
+
+*/
+
+/* ID Selector 
+
+        #idname {
+            /* Styles for the element with id="idname" */
+        }
+
+*/
+    
 
 /* Body */
 body {
