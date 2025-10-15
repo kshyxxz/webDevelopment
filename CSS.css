@@ -1,5 +1,16 @@
 /* CSS for most frequently used HTML tags and their common attributes */
 
+1. Inline CSS
+   <element style="property: value;">
+
+2. Internal CSS
+    <style>
+         /* CSS rules here */
+    </style>
+    
+3. External CSS (linking to a .css file)
+    <link rel="stylesheet" href="path/to/yourfile.css">
+
 /* Element Selector */
 element {
     /* Styles for all <element> tags */
