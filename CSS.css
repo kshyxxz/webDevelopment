@@ -1,0 +1,154 @@
+/* CSS for most frequently used HTML tags and their common attributes */
+
+/* Element Selector */
+element {
+    /* Styles for all <element> tags */
+}
+
+/* Class Selector */
+.classname {
+    /* Styles for all elements with class="classname" */
+}
+
+/* ID Selector */
+#idname {
+    /* Styles for the element with id="idname" */
+}
+
+/* Body */
+body {
+    background-color: #f9f9f9; /* Sets page background color */
+    color: #222; /* Sets default text color */
+    font-family: Arial, sans-serif; /* Sets default font */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold; /* Makes headings bold */
+    margin: 1em 0 0.5em 0; /* Adds space above and below headings */
+    color: #333; /* Sets heading text color */
+    text-align: left; /* Aligns headings to the left */
+}
+
+/* Paragraph */
+p {
+    margin: 0 0 1em 0; /* Adds space below paragraphs */
+    line-height: 1.6; /* Improves readability */
+    text-align: left; /* Aligns text to the left */
+}
+
+/* Links */
+a {
+    color: #0077cc; /* Sets link color */
+    text-decoration: underline; /* Underlines links */
+    cursor: pointer; /* Shows pointer cursor on hover */
+    /* target-new: tab;  Not a valid CSS property */
+}
+a:hover {
+    color: #005fa3; /* Changes link color on hover */
+    text-decoration: none; /* Removes underline on hover */
+}
+
+/* Images */
+img {
+    max-width: 100%; /* Makes image responsive */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes inline spacing */
+    /* alt: "";  Not a valid CSS property */
+    /* title: "";  Not a valid CSS property */
+}
+
+/* Lists */
+ul, ol {
+    margin: 1em 0; /* Adds space above and below lists */
+    padding-left: 2em; /* Indents list items */
+}
+li {
+    margin-bottom: 0.5em; /* Adds space below each list item */
+}
+
+/* Tables */
+table {
+    width: 100%; /* Makes table full width */
+    border-collapse: collapse; /* Removes space between borders */
+    margin-bottom: 1em; /* Adds space below table */
+}
+th, td {
+    border: 1px solid #ccc; /* Adds border to cells */
+    padding: 0.5em; /* Adds space inside cells */
+    text-align: left; /* Aligns text to the left */
+}
+
+/* Forms */
+form {
+    margin: 1em 0; /* Adds space above and below form */
+}
+input, textarea, select, button {
+    display: block; /* Places elements on new lines */
+    margin-bottom: 1em; /* Adds space below elements */
+    padding: 0.5em; /* Adds space inside elements */
+    border: 1px solid #bbb; /* Adds border */
+    border-radius: 4px; /* Rounds corners */
+    font-size: 1em; /* Sets font size */
+}
+input[type="checkbox"], input[type="radio"] {
+    display: inline-block; /* Keeps checkboxes/radios inline */
+    width: auto; /* Uses default width */
+    margin-right: 0.5em; /* Adds space to the right */
+}
+label {
+    margin-bottom: 0.5em; /* Adds space below label */
+    display: block; /* Places label on new line */
+    font-weight: 500; /* Makes label semi-bold */
+}
+
+/* Div and Span */
+div {
+    margin-bottom: 1em; /* Adds space below div */
+    padding: 0.5em; /* Adds space inside div */
+}
+span {
+    color: inherit; /* Inherits parent color */
+    font-size: inherit; /* Inherits parent font size */
+}
+
+/* Button */
+button {
+    background-color: #0077cc; /* Sets button background */
+    color: #fff; /* Sets button text color */
+    border: none; /* Removes border */
+    cursor: pointer; /* Shows pointer cursor */
+}
+button:hover {
+    background-color: #005fa3; /* Changes background on hover */
+}
+
+/* Header and Footer */
+header, footer {
+    background-color: #f1f1f1; /* Sets background color */
+    padding: 1em; /* Adds space inside */
+    text-align: center; /* Centers text */
+    border-top: 1px solid #ccc; /* Adds top border */
+    border-bottom: 1px solid #ccc; /* Adds bottom border */
+}
+
+/* Flexbox for layout */
+.container {
+    display: flex; /* Enables flexbox */
+    flex-wrap: wrap; /* Allows wrapping */
+    gap: 1em; /* Adds space between items */
+}
+
+.row {
+    display: flex; /* Enables flexbox */
+    flex-direction: row; /* Sets direction to row */
+    gap: 1em; /* Adds space between items */
+}
+
+.column {
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Sets direction to column */
+    gap: 1em; /* Adds space between items */
+}
