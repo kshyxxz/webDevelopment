@@ -17,7 +17,27 @@
 /* 3. External CSS (linking to a .css file)
 
     <link rel="stylesheet" href="path/to/yourfile.css">
-    
+*/
+
+/* CSS for most frequently used HTML tags and their common attributes */
+
+/* 1. Inline CSS
+
+   <element style="property: value;">
+
+*/
+
+/* 2. Internal CSS
+
+    <style>
+         CSS rules here
+    </style>
+
+*/
+
+/* 3. External CSS (linking to a .css file)
+
+    <link rel="stylesheet" href="path/to/yourfile.css">
 */
 
 
@@ -26,7 +46,7 @@
 /* Element Selector 
 
         element {
-            /* Styles for all <element> tags */
+            Styles for all <element> tags
         }
 
 */
@@ -34,7 +54,7 @@
 /* Class Selector 
 
         .classname {
-            /* Styles for all elements with class="classname" */
+            Styles for all elements with class="classname"
         }
 
 */
@@ -42,7 +62,7 @@
 /* ID Selector 
 
         #idname {
-            /* Styles for the element with id="idname" */
+            Styles for the element with id="idname"
         }
 
 */
@@ -168,6 +188,9 @@ header, footer {
 }
 
 /* Flexbox for layout */
+
+/* height,width -> padding -> border -> margin     1em = 16px */
+
 .container {
     display: flex; /* Enables flexbox */
     flex-wrap: wrap; /* Allows wrapping */
