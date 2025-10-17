@@ -177,5 +177,38 @@
 
 //array
 
+// let marks = [85,97,44,37,76,60];
+// let count = 0;
+// let sum = 0;
+// for(let i=0;i<6;i++){
+//     sum += marks[i];
+//     count++;
+// }
+// avg = sum/count;
+// console.log(`The average of given array is : ${avg}`);
 
+// let prices = [250,645,300,900,50];
+// let i = 0;
+// while(prices[i] != null){
+//     prices[i] = 0.9*prices[i];
+//     i++
+// }
+// console.log(`${prices}`);
+
+// let veggies = ["potato","tomato","radish","carrot"];
+// veggies.push("garlic");
+// console.log(veggies.pop());
+// converted = veggies.toString(); 
+// veggies.unshift("ginger");
+// console.log(veggies.shift());
+// veggies.splice(1,2,"turnip","brinjal"); // 1 index bata 2 ota item delete garne ani replace by
+// console.log(veggies);
+
+// companies = ["Bloomberg","Microsoft","Uber","Google","IBM","Netflix"];
+// removeFirst = companies.shift();
+// console.log(companies);
+// removeOlaAddUber = companies.splice(1,1,"Ola");
+// console.log(companies);
+// addAmazon = companies.push("Amazon");
+// console.log(companies);
 
