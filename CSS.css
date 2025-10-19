@@ -1,4 +1,4 @@
-/* CSS for most frequently used HTML tags and their common attributes */
+/* CSS for most frequently used HTML tags and their common attributes
 
 /* 1. Inline CSS
 
@@ -207,4 +207,9 @@ header, footer {
     display: flex; /* Enables flexbox */
     flex-direction: column; /* Sets direction to column */
     gap: 1em; /* Adds space between items */
+} 
+
+.roman {
+    color : chartreuse;
+    background-color: thistle;
 }
