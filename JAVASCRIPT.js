@@ -361,26 +361,30 @@
 // a = document.querySelector("h1");  //.myClass   #myId
 // console.dir(a);
 
-let element = document.getElementById("demo");
+// let element = document.getElementById("demo");
 
-console.log("1️⃣ tagName:");
-console.log(element.tagName); 
-            // Output: DIV
+// console.log("1️⃣ tagName:");
+// console.log(element.tagName); 
+//             // Output: DIV
 
-console.log("2️⃣ innerText:");
-console.log(element.innerText); 
-            // Output: Hello World 🌍 (only visible text)
+// console.log("2️⃣ innerText:");
+// console.log(element.innerText); 
+//             // Output: Hello World 🌍 (only visible text)
 
-console.log("3️⃣ innerHTML:");
-console.log(element.innerHTML); 
-            // Output: <p>Hello <b style="display:none">hidden</b> World 🌍</p>
+// console.log("3️⃣ innerHTML:");
+// console.log(element.innerHTML); 
+//             // Output: <p>Hello <b style="display:none">hidden</b> World 🌍</p>
 
-console.log("4️⃣ textContent:");
-console.log(element.textContent); 
-            // Output: Hello hidden World 🌍 (includes hidden text)
+// console.log("4️⃣ textContent:");
+// console.log(element.textContent); 
+//             // Output: Hello hidden World 🌍 (includes hidden text)
 
 
-const variable = document.getElementById("heading");
-console.log(variable.innerHTML);
-console.log(variable.innerText);
-console.log(variable.tagName);
+// const variable = document.getElementById("heading");
+// console.log(variable.innerHTML);
+// console.log(variable.innerText);
+// console.log(variable.tagName);
+
+const classVarx = document.getElementsByClassName("roman");
+console.log(classVarx.tagName);
+console.log(classVarx.innerHTML);
