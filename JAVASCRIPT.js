@@ -352,14 +352,14 @@
 
 // document.body.style.background = "green";
 
-x = document.getElementById("heading");
-console.log(x);
-y = document.getElementsByClassName("roman");
-console.log(y);
-z = document.getElementsByTagName("p");
-console.log(z);
-a = document.querySelector("h1");  //.myClass   #myId
-console.dir(a);
+// x = document.getElementById("heading");
+// console.log(x);
+// y = document.getElementsByClassName("roman");
+// console.log(y);
+// z = document.getElementsByTagName("p");
+// console.log(z);
+// a = document.querySelector("h1");  //.myClass   #myId
+// console.dir(a);
 
 let element = document.getElementById("demo");
 
@@ -378,3 +378,9 @@ console.log(element.innerHTML);
 console.log("4️⃣ textContent:");
 console.log(element.textContent); 
             // Output: Hello hidden World 🌍 (includes hidden text)
+
+
+const variable = document.getElementById("heading");
+console.log(variable.innerHTML);
+console.log(variable.innerText);
+console.log(variable.tagName);
