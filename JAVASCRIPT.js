@@ -385,6 +385,29 @@
 // console.log(variable.innerText);
 // console.log(variable.tagName);
 
-const classVarx = document.getElementsByClassName("roman");
-console.log(classVarx.tagName);
-console.log(classVarx.innerHTML);
+// const classVarx = document.getElementsByClassName("roman");
+// console.log(classVarx[0].tagName);
+// console.log(classVarx[0].innerHTML);
+
+//dom tree task {parent, firstChild, lastChild, children}
+// console.dir(document.body.firstChild);
+
+// let header = document.querySelector("h1");
+// header.innerHTML = `<b><i> ${header.innerText} </i></b>`;   // damnnnn this is crazyyyy
+
+// let append = document.querySelector("h2");
+// append.innerText = `${append.innerText} from Apna College students`;
+
+// for(let i=0;i<3;i++){
+//     let append = document.getElementsByClassName("box");  // can also use let append = document.querySelectorAll(".box");
+//     if(i==0){
+//         append[i].innerText = "too bold";
+//     }
+//     else if(i==1){
+//         append[i].innerText = "too italic";
+//     }
+//     else{
+//         append[i].innerText = "too underlined";
+//     }
+// }
+
