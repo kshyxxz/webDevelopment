@@ -69,13 +69,7 @@
     
 
 /* Body */
-body {
-    background-color: #f9f9f9; /* Sets page background color */
-    color: #222; /* Sets default text color */
-    font-family: Arial, sans-serif; /* Sets default font */
-    margin: 0; /* Removes default margin */
-    padding: 0; /* Removes default padding */
-}
+
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
@@ -212,4 +206,26 @@ header, footer {
 .roman {
     color : chartreuse;
     background-color: thistle;
+}
+
+.box {
+    margin: 10px;
+    padding: 5px;
+    border: 5px;
+    border-color: thistle;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#demo {
+    border: 2px solid black;
+}
+
+.question {
+    color: hotpink;
+    /* //background-color: darkslategray; */
+}
+
+.newQuestion {
+    /* //color: goldenrod; */
+    background-color: slateblue;
 }

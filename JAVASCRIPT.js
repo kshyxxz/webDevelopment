@@ -411,3 +411,44 @@
 //     }
 // }
 
+// let division = document.querySelectorAll("div"); //crazyyy haii ferii yo method ta
+// console.log(division);
+// console.log(division[1].getAttribute("class"));
+
+// let firstDiv = document.querySelectorAll("div");
+// firstDiv[1].setAttribute("class","boxes");
+// console.log(firstDiv[1].getAttribute("class"));
+
+// let div = document.querySelectorAll("div");
+// console.log(div[1]);
+// console.log(div[1].style);
+// div[1].style.backgroundColor = "black";
+// div[1].style.color = "white";
+
+// let btn1 = document.createElement("button");     //node.append(element);
+// btn1.innerText = "append";
+// let division = document.querySelectorAll("div");
+// division[0].append(btn1);
+// let btn2 = document.createElement("button");
+// btn2.innerText = "prepend";
+// division[0].prepend(btn2);
+// let btn3 = document.createElement("button");
+// btn3.innerText = "before";
+// division[0].before(btn3);
+// let btn4 = document.createElement("button"); 
+// btn4.innerText = "after";
+// division[0].after(btn4);
+
+// node.remove();
+
+// let newBtn = document.createElement("button");
+// newBtn.innerText = "click me";
+// newBtn.style.backgroundColor = "red";
+// newBtn.color = "white";
+// let location1 = document.querySelector("body");
+// location1.prepend(newBtn);
+
+
+// let para = document.querySelectorAll("p");
+// para[2].classList.add("newQuestion");
+        // console.log(para[2].innerText);
