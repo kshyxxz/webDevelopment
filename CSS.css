@@ -229,3 +229,8 @@ header, footer {
     /* //color: goldenrod; */
     background-color: slateblue;
 }
+
+#toggle {
+    background-color: grey;
+    color: white;
+}

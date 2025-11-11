@@ -472,3 +472,47 @@
 //eventmiss10_2
 //eventmiss11
 
+// let val = 0;
+// const functionToIncreaseCount = () => {
+//     val++;
+//     return val;
+// }
+
+// let checker = document.querySelector("#boldId");
+// checker.onmouseover = () => {
+//         console.log(`this is count value ${functionToIncreaseCount()}`);
+// }
+
+// let val = 0;
+// let select = document.querySelector("div");
+// select.addEventListener('mouseover', (evt) => {
+//         console.log(`${val++}`);
+//         console.log(`${evt.clientX}, ${evt.clientY}`);
+// });
+
+// let val = 0;
+// let vrr = document.querySelector("div");
+// const calling = (evt) => {
+//         console.log(`${val++}`);
+//         console.log(`${evt.clientX}, ${evt.clientY}`);
+// }
+// vrr.addEventListener('mouseover',calling);
+
+let val = 0;   // 0 for light , 1 for dark
+const btn = document.querySelector("#toggle");
+const bdy = document.querySelector("#booddy");
+const toggle = (mode) => {
+        if(val == 0){
+                val = 1;
+                bdy.style.backgroundColor = "black";
+                bdy.style.color = "white";
+                console.log(`${mode.target}`);
+        }
+        else{
+                val = 0;
+                bdy.style.backgroundColor = "white";
+                bdy.style.color = "black";
+                console.log(`${mode.target}`);
+        }
+}
+btn.addEventListener('click',toggle);
