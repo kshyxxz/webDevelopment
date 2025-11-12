@@ -498,21 +498,61 @@
 // }
 // vrr.addEventListener('mouseover',calling);
 
+// let val = 0;   // 0 for light , 1 for dark
+// const btn = document.querySelector("#toggle");
+// const bdy = document.querySelector("body");
+// const toggle = (mode) => {
+//         if(val == 0){
+//                 val = 1;
+//                 bdy.style.backgroundColor = "black";
+//                 bdy.style.color = "white";
+//                 console.log(`${mode.target}`);
+//         }
+//         else{
+//                 val = 0;
+//                 bdy.style.backgroundColor = "white";
+//                 bdy.style.color = "black";
+//                 console.log(`${mode.target}`);
+//         }
+// }
+// btn.addEventListener('click',toggle);
+
 let val = 0;   // 0 for light , 1 for dark
+const dom = document.querySelector("#dom");
 const btn = document.querySelector("#toggle");
-const bdy = document.querySelector("#booddy");
+const bdy = document.querySelector("body");
+
+const hoverlight = (move) => {
+        dom.setAttribute("class","darkMode");
+        console.log(`${move.target}`);
+}
+
+const hoverdark = (move) => {
+        dom.setAttribute("class","lightMode");
+        console.log(`${move.target}`);
+}
+
 const toggle = (mode) => {
         if(val == 0){
                 val = 1;
-                bdy.style.backgroundColor = "black";
-                bdy.style.color = "white";
+                bdy.setAttribute("class", "darkMode");
                 console.log(`${mode.target}`);
+                
+                dom.removeEventListener('mouseover',hoverlight);
+                dom.removeEventListener('mouseout',hoverdark);
+                dom.addEventListener('mouseover',hoverdark);
+                dom.addEventListener('mouseout',hoverlight);
         }
         else{
                 val = 0;
-                bdy.style.backgroundColor = "white";
-                bdy.style.color = "black";
+                bdy.setAttribute("class", "lightMode");
                 console.log(`${mode.target}`);
+
+                dom.removeEventListener('mouseover',hoverdark);
+                dom.removeEventListener('mouseout',hoverlight);
+                dom.addEventListener('mouseover',hoverlight);
+                dom.addEventListener('mouseout',hoverdark);
         }
 }
 btn.addEventListener('click',toggle);
+
