@@ -1,0 +1,50 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 200px); /* 3 columns of 200px each */
+    grid-template-rows: repeat(3, 200px);    /* 3 rows of 200px each */
+    gap: 20px;                               /* spacing between buttons */
+    justify-content: center;                 /* center grid horizontally */
+    margin-top: 50px;                        /* optional vertical spacing */
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    color: aliceblue;
+    border: 2px solid black;
+    border-radius: 0%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 100px;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+.gridReset {
+    display: grid;
+    grid-template-columns: repeat(1, 200px); 
+    grid-template-rows: repeat(1, 200px);    
+    gap: 5px;                               
+    justify-content: center;                 
+    margin-top: 50px;
+}
+
+#reset {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+footer {
+    size: 10px;
+    background-color: gray;
+    text-align: center;
+}
