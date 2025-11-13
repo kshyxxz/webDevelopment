@@ -1,0 +1,45 @@
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    color: aliceblue;
+    border: 2px solid black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(1, 200px);    
+    gap: 20px;                               
+    justify-content: center;                 
+    margin-top: 50px;    
+    margin-bottom: 50px;                    
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+footer {
+    size: 10px;
+    background-color: gray;
+    text-align: center;
+}
+
+.gridMsg {
+    display: grid;
+    grid-template-rows: repeat(1, 50px);
+    grid-template-columns: repeat(1, 250px);
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.gridMsg button {
+    border-radius: 0%;
+    cursor: none;
+}
