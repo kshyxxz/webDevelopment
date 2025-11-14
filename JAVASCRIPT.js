@@ -517,42 +517,108 @@
 // }
 // btn.addEventListener('click',toggle);
 
-let val = 0;   // 0 for light , 1 for dark
-const dom = document.querySelector("#dom");
-const btn = document.querySelector("#toggle");
-const bdy = document.querySelector("body");
+// let val = 0;   // 0 for light , 1 for dark
+// const dom = document.querySelector("#dom");
+// const btn = document.querySelector("#toggle");
+// const bdy = document.querySelector("body");
 
-const hoverlight = (move) => {
-        dom.setAttribute("class","darkMode");
-        console.log(`${move.target}`);
-}
+// const hoverlight = (move) => {
+//         dom.setAttribute("class","darkMode");
+//         console.log(`${move.target}`);
+// }
 
-const hoverdark = (move) => {
-        dom.setAttribute("class","lightMode");
-        console.log(`${move.target}`);
-}
+// const hoverdark = (move) => {
+//         dom.setAttribute("class","lightMode");
+//         console.log(`${move.target}`);
+// }
 
-const toggle = (mode) => {
-        if(val == 0){
-                val = 1;
-                bdy.setAttribute("class", "darkMode");
-                console.log(`${mode.target}`);
+// const toggle = (mode) => {
+//         if(val == 0){
+//                 val = 1;
+//                 bdy.setAttribute("class", "darkMode");
+//                 console.log(`${mode.target}`);
                 
-                dom.removeEventListener('mouseover',hoverlight);
-                dom.removeEventListener('mouseout',hoverdark);
-                dom.addEventListener('mouseover',hoverdark);
-                dom.addEventListener('mouseout',hoverlight);
-        }
-        else{
-                val = 0;
-                bdy.setAttribute("class", "lightMode");
-                console.log(`${mode.target}`);
+//                 dom.removeEventListener('mouseover',hoverlight);
+//                 dom.removeEventListener('mouseout',hoverdark);
+//                 dom.addEventListener('mouseover',hoverdark);
+//                 dom.addEventListener('mouseout',hoverlight);
+//         }
+//         else{
+//                 val = 0;
+//                 bdy.setAttribute("class", "lightMode");
+//                 console.log(`${mode.target}`);
 
-                dom.removeEventListener('mouseover',hoverdark);
-                dom.removeEventListener('mouseout',hoverlight);
-                dom.addEventListener('mouseover',hoverlight);
-                dom.addEventListener('mouseout',hoverdark);
+//                 dom.removeEventListener('mouseover',hoverdark);
+//                 dom.removeEventListener('mouseout',hoverlight);
+//                 dom.addEventListener('mouseover',hoverlight);
+//                 dom.addEventListener('mouseout',hoverdark);
+//         }
+// }
+// btn.addEventListener('click',toggle);
+
+//class and objects
+
+// const student = {
+//         fullName : "kshitiz shrestha",
+//         marks : 94,
+//         printMarks : function(){
+//                 console.log("marks = ", this.marks);
+//         }
+// }
+
+// const employee = {
+//         calcTax() {
+//                 console.log("tax is 10% ");
+//         }
+// };
+
+// const karanArjun = {
+//         salary : 50000
+// };
+
+// karanArjun.__proto__ = employee; 
+
+//carrr
+
+// class car {
+//         start() {
+//                 console.log("start");
+//         }
+//         stop( ) {
+//                 console.log("stop"); 
+//         }
+//         setBrand(brand) {
+//                 this.brandName = brand;   // this.brand = brand; 
+//         }
+// };
+
+// let fortuner = new car();
+
+//constructor
+
+class test {
+        constructor (name,age) {
+                this.name = name;
+                this.age = age;
         }
 }
-btn.addEventListener('click',toggle);
 
+let kshitiz = new test("kshitiz",20);
+let shrestha = new test("shrestha",20);
+console.log(kshitiz);
+console.log(shrestha);
+
+//inheritance
+
+class Parent {
+        hello() {
+                console.log("hello from parent");
+        }
+}
+
+class Child extends Parent {
+
+}
+
+let obj = new Child();
+console.log(boj.hello());
