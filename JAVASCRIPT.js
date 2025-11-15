@@ -716,3 +716,165 @@
 //         console.log(err);
 // }
 
+// async wait >> promise chains >> callback hell
+
+// setTimeout(() => {
+//         console.log("this is 4s delayed!")
+// },4000);
+
+// // callbacks
+
+// function calculator(a,b,sumCallback) {
+//         sumCallback(a,b);
+// }
+
+// function sum(a,b) {
+//         console.log(a+b);
+// }
+
+// calculator(1,2,sum);
+
+// function getData(dataId, getNextData) {
+//         setTimeout(() => {
+//                 console.log("data", dataId);
+//                 if(getNextData) {
+//                         getNextData();
+//                 }
+//         }, 2000);
+// }
+
+// getData(1, () => {
+//         getData(2, () => {
+//                 getData(3);                    //callback hell
+//         });  
+// });
+
+// promises
+
+// let promise = new promise((resolve, reject) => {
+//         console.log("i am a promise");
+// })
+
+// function getData(dataId, getNextData) {
+//         return new Promise((resolve, reject) => {
+//                 setTimeout(() => {
+//                         console.log("data", dataId);
+//                         resolve("success");
+//                         if(getNextData) {
+//                                 getNextData();
+//                         }
+//                 }, 5000);
+//         });
+// }
+
+// const getPromise = () => {
+//         return new Promise((resolve, reject) => {
+//                 console.log("i am a promise!");
+//                 resolve("success");
+//         });
+// };
+
+// let promise = getPromise();
+// promise.then((res) => {
+//         console.log("successful", res);
+// });
+// promise.catch((err) => {
+//         console.log("errorful");
+// });
+
+// promise chain
+
+// function asyncFunc() {
+//         return new Promise((resolve, reject) => {
+//                 setTimeout(() => {
+//                         console.log("asynchronous");
+//                         resolve("success async");
+//                 }, 3000);
+//         });
+// }
+
+// function syncFunc() {
+//         return new Promise((resolve, reject) => {
+//                 setTimeout(() => {
+//                         console.log("synchronous");
+//                         resolve("success sync");
+//                 }, 3000);
+//         });
+// }
+
+// console.log("fetching type1");
+// let p1 = asyncFunc();
+// p1.then((res) => {
+//         console.log("fetching type2");
+//         let p2 = syncFunc();
+//         p2.then((res) => {
+//         })
+// })
+
+// function getData(data) {
+//         return new Promise((resolve, reject) => {
+//                 setTimeout(() => {
+//                         console.log(data);
+//                         resolve("done");        //always put resolve/reject inside setTimeout()
+//                 }, 3000);
+//         });
+// }
+
+// // getData(1).then((res) => {
+// //         getData(2).then((res) => {
+// //                 getData(3).then((res) => {
+// //                 });
+// //         });
+// // });
+
+// getData(1)
+//         .then((res) => {
+//                 return getData(2);
+//         })
+//         .then((res) => {                        //promise chain
+//                 return getData(3);
+//         })
+//         .then((res) => {
+//         });
+
+// async - await || async function returns a promise
+
+// function api() {
+//         return new Promise((resolve, reject) => {
+//                 setTimeout(() => {
+//                         console.log("weather data");
+//                         resolve(200);
+//                         reject(300);
+//                 }, 2000);
+//         });
+// }
+
+// async function getWeatherData() {
+//         await api();  //1st call
+//         await api();  //2md call
+// }
+
+// getWeatherData();
+
+// function getData(data) {
+//         return new Promise((resolve, reject) => {
+//                 setTimeout(() => {
+//                         console.log("data = ",data);
+//                         resolve(200);
+//                         reject(300);
+//                 }, 2000);
+//         });
+// }
+
+// async function data() {
+//         await getData(1);
+//         await getData(2);
+//         await getData(3);
+// }
+
+// data();
+
+// use IIFE Immediately Invoked Function Expression to avoid creating the async function and calling it
+// can be used just once
+
+//(functionnnn without name)();
