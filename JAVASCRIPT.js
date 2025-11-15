@@ -876,5 +876,19 @@
 
 // use IIFE Immediately Invoked Function Expression to avoid creating the async function and calling it
 // can be used just once
+//                 (functionnnn without name)();
 
-//(functionnnn without name)();
+//fetching API application programming interface
+
+const fact = document.querySelector("#facts");
+const btn = document.querySelector("#btn");
+const URL = "https://catfact.ninja/fact";
+
+const getFacts = async () => {
+        let response = await fetch(URL);
+        console.log(response);
+        let data = await response.json();
+        fact.innerText = data.fact;
+};
+
+btn.addEventListener('click',getFacts);
