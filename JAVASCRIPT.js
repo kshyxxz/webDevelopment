@@ -596,29 +596,123 @@
 
 //constructor
 
-class test {
-        constructor (name,age) {
-                this.name = name;
-                this.age = age;
-        }
-}
+// class test {
+//         constructor (name,age) {
+//                 this.name = name;
+//                 this.age = age;
+//         }
+// }
 
-let kshitiz = new test("kshitiz",20);
-let shrestha = new test("shrestha",20);
-console.log(kshitiz);
-console.log(shrestha);
+// let kshitiz = new test("kshitiz",20);
+// let shrestha = new test("shrestha",20);
+// console.log(kshitiz);
+// console.log(shrestha);
 
-//inheritance
+// //inheritance
 
-class Parent {
-        hello() {
-                console.log("hello from parent");
-        }
-}
+// class Parent {
+//         hello() {
+//                 console.log("hello from parent");
+//         }
+// }
 
-class Child extends Parent {
+// class Child extends Parent {
 
-}
+// }
 
-let obj = new Child();
-console.log(boj.hello());
+// let obj = new Child();
+// console.log(obj.hello());
+
+//method overriding
+
+// class person {
+//         constructor() {
+//                 this.species = "homo sapiens";
+//         }
+
+//         eat() {
+//                 console.log("eatinggg");
+//         }
+
+//         sleep() {
+//                 console.log("sleepinggg");
+//         }
+
+//         work() {
+//                 console,log("do your work");
+//         }
+// }
+
+// class engineer extends person {
+//         work() {
+//                 console.log("build");
+//         }
+// }
+
+// let eng = new engineer();
+
+//super keyword    ( +++++ constructor overriding )
+
+// class parent {
+//         constructor(name) {                                       //  (4)
+//                 console.log("raising a child");
+//                 this.name = name;
+//                 console.log(name + "parent");
+//         }
+
+//         work() {
+//                 console.log("working parent");
+//         }
+// }
+
+// class child extends parent {                                  //  (2)
+//         constructor(name) {
+//                 super(name);             //to invoke parent constructor     //   (3)
+//                 this.name = name;                            //   (5)
+//                 console.log(name);
+//         }
+
+//         work() {
+//                 super.work();
+//                 console.log("working child");
+//         }
+// }
+
+// let children = new child("roman");                            // (1)
+
+// data = "secret message";
+// class User {
+//         constructor(name, email) {
+//                 this.name = name;
+//                 this.email = email;
+//         }
+
+//         viewData() {
+//                 //console.log(`Name : ${this.name}\nEmail : ${this.email}`);
+//                 console.log(data);
+//         }
+// }
+
+// let stu1 = new User("kshitiz","roman@gmail.com");
+// let stu2 = new User("roman","power@gmail.com");
+
+// class Admin extends User {
+//         editData(newData) {
+//                 data = newData;
+//         }
+// }
+
+// let adm = new Admin();
+
+//error handling (try and catch)
+
+// let a = 5;
+// let b = 10;
+
+// console.log(a+b);
+// try {
+//         console.log(a+c);
+// } catch(err) {
+//         console.log(err);
+// }
+
