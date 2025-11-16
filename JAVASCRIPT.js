@@ -893,12 +893,14 @@
 
 // btn.addEventListener('click',getFacts);   // 20:22
 
-const URL = "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m";
-const btn = document.querySelector("#btn");
-const APIcall = async () => {
-        let response = await fetch(URL);
-        console.log(response);
-        let data = await response.json();
-        btn.innerText = data.elevation;
-}
-btn.addEventListener('click',APIcall);
+// const URL = "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m";
+// const btn = document.querySelector("#btn");
+// const APIcall = async () => {
+//         let response = await fetch(URL);
+//         console.log(response);
+//         let data = await response.json();
+//         btn.innerText = data.elevation;
+// }
+// btn.addEventListener('click',APIcall);
+
+--response--24:31
