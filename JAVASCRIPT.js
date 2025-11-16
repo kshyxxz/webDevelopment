@@ -880,15 +880,25 @@
 
 //fetching API application programming interface
 
-const fact = document.querySelector("#facts");
-const btn = document.querySelector("#btn");
-const URL = "https://catfact.ninja/fact";
+// const fact = document.querySelector("#facts");
+// const btn = document.querySelector("#btn");
+// const URL = "https://catfact.ninja/fact";
 
-const getFacts = async () => {
+// const getFacts = async () => {
+//         let response = await fetch(URL);
+//         console.log(response);
+//         let data = await response.json();
+//         fact.innerText = data.rain;
+// };
+
+// btn.addEventListener('click',getFacts);   // 20:22
+
+const URL = "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m";
+const btn = document.querySelector("#btn");
+const APIcall = async () => {
         let response = await fetch(URL);
         console.log(response);
         let data = await response.json();
-        fact.innerText = data.fact;
-};
-
-btn.addEventListener('click',getFacts);
+        btn.innerText = data.elevation;
+}
+btn.addEventListener('click',APIcall);
