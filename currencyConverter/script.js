@@ -195,14 +195,14 @@ toSelect.addEventListener('change', () => {
     rates(countryCodeToCurrencyCode[toSelect.value]);
 });
 
+const URL = "https://v6.exchangerate-api.com/v6/7583db9b8cf13aca7316fa65/latest/USD";
+
 const fromAmount = document.querySelector("#fromAmount");
 const toAmount = document.querySelector("#toAmount");
 
-const rates = async (toCurrencyCode) => {
-    const fromCurrencyCode = countryCodeToCurrencyCode[toCurrencyCode];
-    const URL = `https://v6.exchangerate-api.com/v6/7583db9b8cf13aca7316fa65/latest/${fromCurrencyCode}`;
+const rates = async (currencyCode) => {
     let response = await fetch(URL);
     let transformed = await response.json();
-    let converted = transformed.conversion_rates[fromCurrencyCode];
+    let converted = transformed.conversion_rates[currencyCode];
     toAmount.value = fromAmount.value*converted;
 }
