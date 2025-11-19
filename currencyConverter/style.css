@@ -1,18 +1,290 @@
 .conversion {
+    width: 100%;
+    max-width: 900px;
     display: grid;
-    justify-content: center;
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 18px;
+    align-items: start;
+    padding: 18px;
+    box-sizing: border-box;
 }
 
-img {
-    height: 25px;
+:root{
+    --bg: #f4f7fb;
+    --card: #ffffff;
+    --muted: #6b7280;
+    --accent: #4f46e5;
+    --input-border: #d1d5db;
+    --shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+    --radius: 12px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body{
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: linear-gradient(180deg, var(--bg), #eef2ff 60%);
+    color: #111827;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 32px 16px;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 22px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.container h2 {
+    margin: 0 0 12px 0;
+    font-size: 1.6rem;
+    color: #0f172a;
+}
+
+.main {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+}
+
+.from, .to {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 16px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+}
+
+.fromP p, .toP p {
+    margin: 0;
+    font-weight: 600;
+    color: #0b1220;
+    font-size: 0.98rem;
+}
+
+.fromI, .toI, .fromS, .toS {
+    display: block;
+    width: 100%;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: 1px solid var(--input-border);
+    border-radius: 8px;
+    box-sizing: border-box;
+    background: #fff;
+    color: #0b1220;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+    outline: none;
+}
+
+#toAmount[readonly] {
+    background: #f8fafc;
+    cursor: default;
+}
+
+input:focus, select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 6px 14px rgba(79,70,229,0.12);
+}
+
+#fromImg, #toImg {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;
+}
+#fromImg img, #toImg img {
+    height: 28px;
     width: auto;
+    display: block;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.06);
 }
 
 footer {
-    size: 10px;
-    background-color: gray;
     text-align: center;
-    margin-top: 50px;
+    font-size: 0.85rem;
+    color: var(--muted);
+    width: 100%;
+    padding: 12px 0 6px 0;
 }
 
+@media (max-width: 640px) {
+    .conversion {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 12px;
+    }
+    body {
+        padding: 18px;
+    }
+}
+.conversion {
+    width: 100%;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 18px;
+    align-items: start;
+    padding: 18px;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg: #f4f7fb;
+    --card: #ffffff;
+    --muted: #6b7280;
+    --accent: #4f46e5;
+    --input-border: #d1d5db;
+    --shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+    --radius: 12px;
+}
+
+/* Page base */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body{
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: linear-gradient(180deg, var(--bg), #eef2ff 60%);
+    color: #111827;
+    display: flex;
+    flex-direction: column; /* stack header, main, footer vertically */
+    align-items: center;
+    min-height: 100vh;
+    padding: 32px 16px;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* App container */
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 22px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.container h2 {
+    margin: 0 0 12px 0;
+    font-size: 1.6rem;
+    color: #0f172a;
+}
+
+/* Main card */
+.main {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* take remaining space between header and footer */
+    width: 100%;
+}
+
+/* Card style for each side */
+.from, .to {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 16px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+}
+
+/* Label */
+.fromP p, .toP p {
+    margin: 0;
+    font-weight: 600;
+    color: #0b1220;
+    font-size: 0.98rem;
+}
+
+/* Input + select row layout */
+.fromI, .toI, .fromS, .toS {
+    display: block;
+    width: 100%;
+}
+
+/* Inputs and selects */
+input[type="text"], select {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: 1px solid var(--input-border);
+    border-radius: 8px;
+    box-sizing: border-box;
+    background: #fff;
+    color: #0b1220;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+    outline: none;
+}
+
+/* read-only input style */
+#toAmount[readonly] {
+    background: #f8fafc;
+    cursor: default;
+}
+
+/* Focus state */
+input:focus, select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 6px 14px rgba(79,70,229,0.12);
+}
+
+/* Flag container */
+#fromImg, #toImg {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;
+}
+#fromImg img, #toImg img {
+    height: 28px;
+    width: auto;
+    display: block;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--muted);
+    width: 100%;
+    padding: 12px 0 6px 0;
+}
+
+/* Small screens: single column */
+@media (max-width: 640px) {
+    .conversion {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 12px;
+    }
+    body {
+        padding: 18px;
+    }
+}

@@ -198,6 +198,8 @@ toSelect.addEventListener('change', () => {
 const fromAmount = document.querySelector("#fromAmount");
 const toAmount = document.querySelector("#toAmount");
 
+const rate = document.querySelector(".toP");
+
 const rates = async (fromCurrencyCode) => {
     let toCurrencyCode = countryCodeToCurrencyCode[toSelect.value];
     const URL = `https://v6.exchangerate-api.com/v6/7583db9b8cf13aca7316fa65/latest/${fromCurrencyCode}`;
@@ -205,6 +207,7 @@ const rates = async (fromCurrencyCode) => {
     let transformed = await response.json();
     let converted = transformed.conversion_rates[toCurrencyCode];
     toAmount.value = (fromAmount.value*converted).toFixed(3);
+    rate.innerHTML = `<p>Converted Amount at Rate = ${converted.toFixed(3)} : </p>`;
 }
 
 fromAmount.addEventListener('input', () => {
