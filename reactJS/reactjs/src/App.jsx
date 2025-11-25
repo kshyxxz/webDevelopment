@@ -1,10 +1,8 @@
-import Hello from "./components/Hello";
+import ConditionalComponent from "./components/ConditionalComponent";
 function App() {
   return (
     <div className="App">
-      <Hello name="robin" msg="how are you?"/>
-      <Hello name="pat" msg="are you ok?"/>
-      <Hello name="wood" msg="how you doin?"/>
+      <ConditionalComponent display={true} />
     </div>
   );
 }

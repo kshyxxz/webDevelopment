@@ -1,6 +1,6 @@
 const name = "robin";
-function Hello(props) {
-    return <h1>hello {props.name}, {props.msg}</h1>;
+function Hello({person}) {
+    return <h1>hello {person.seatNumbers} {person.name}, {person.msg} {person.emoji}</h1>;
 }
 
 export default Hello;
