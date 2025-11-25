@@ -4,23 +4,27 @@ export default function Fruits() {
     const fruits = [
         {
             name: "Apple",
-            price: "$3.75/lb",
-            emoji: "🍎"
+            price: '3.75',
+            emoji: "🍎",
+            soldOut: false
         },
         {
             name: "Mango",
-            price: "$5.50/lb",
-            emoji: "🥭"
+            price: '5.50',
+            emoji: "🥭",
+            soldOut: true
         },
         {
             name: "Banana",
-            price: "$2.20/lb",
-            emoji: "🍌"
+            price: '2.20',
+            emoji: "🍌",
+            soldOut: true
         },
         {
             name: "Grapes",
-            price: "$3.75/lb",
-            emoji: "🍇"
+            price: '7.75',
+            emoji: "🍇",
+            soldOut: false
         }
     ];
     return (<ul>
@@ -31,6 +35,7 @@ export default function Fruits() {
                     name={fruit.name} 
                     price={fruit.price} 
                     emoji={fruit.emoji}
+                    soldOut={fruit.soldOut}
                 />
             ))}
         </div>

@@ -1,7 +1,9 @@
-export default function Fruit({name,price,emoji}) {
+export default function Fruit({name,price,emoji,soldOut}) {
     return (
-        <div>
-            {emoji} {name} {price}
-        </div>
+        <>
+            {
+                <li>{emoji} {name} {soldOut ? "Soldout" : `$${price}/lb`}</li>
+            }
+        </>
     );
 }
