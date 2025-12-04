@@ -5,3 +5,4 @@ export default function InlineComponent() {
 		</>
 	);
 }
+//reactMiss6
