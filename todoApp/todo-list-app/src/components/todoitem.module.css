@@ -18,7 +18,7 @@
 	float: right;
 	padding: 12px 20px;
 	border: none;
-	background-color: #f7ac18;
+	background-color: #102660;
 	margin-top: -5px;
 	border-radius: 4px;
 	color: white;
@@ -27,4 +27,12 @@
 
 .completed {
 	text-decoration: line-through;
+}
+
+.completed:hover {
+	cursor: pointer;
+}
+
+.incomplete:hover {
+	cursor: pointer;
 }

@@ -12,7 +12,7 @@ export default function Todoitem({ item, todos, setTodos }) {
 			)
 		);
 	}
-	const className = item.done ? styles.completed : "";
+	const className = item.done ? styles.completed : styles.incomplete;
 	return (
 		<div className={styles.item}>
 			<div className={styles.itemname}>
