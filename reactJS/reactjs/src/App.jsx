@@ -1,16 +1,24 @@
-import Form from "./components/Form";
-import Counter from "./components/Counter";
-import UseReducer from "./components/useReducer";
-import ObjectUseReducer from "./components/ObjectUseReducer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Homepage from "./pages/Homepage";
+import Dashboard from "./pages/Dashboard";
+import PageNotFound from "./pages/PageNotFound";
+import Nav from "./components/Nav";
+import Profile from "./pages/Profile";
+import Settings from "./pages/Settings";
 
 function App() {
 	return (
-		<div className="App">
-			{/* <Form />
-			<Counter /> */}
-			{/* <UseReducer /> */}
-			<ObjectUseReducer />
-		</div>
+		<BrowserRouter>
+			<Nav />
+			<Routes>
+				<Route path="/" element={<Homepage />} />
+				<Route path="/dashboard" element={<Dashboard />}>
+					<Route path="profile" element={<Profile />} />
+					<Route path="settings" element={<Settings />} />
+				</Route>
+				<Route path="*" element={<PageNotFound />} />
+			</Routes>
+		</BrowserRouter>
 	);
 }
 
