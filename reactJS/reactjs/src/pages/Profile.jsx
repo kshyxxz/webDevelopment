@@ -1,3 +1,7 @@
+import { useLocation } from "react-router-dom";
+
 export default function Profile() {
-	return <div>This is a profile page</div>;
+	const location = useLocation();
+	const { username } = location.state || {};
+	return <div>This is a profile page for {username}</div>;
 }
