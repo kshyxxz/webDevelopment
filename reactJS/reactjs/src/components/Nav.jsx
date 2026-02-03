@@ -5,6 +5,7 @@ export default function Nav() {
 		<div>
 			<Link to="/">Home</Link>
 			<Link to="/dashboard">Dashboard</Link>
+			<Link to="/products">Products</Link>
 		</div>
 	);
 }
