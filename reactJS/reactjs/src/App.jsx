@@ -6,21 +6,25 @@ import Nav from "./components/Nav";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import Products from "./pages/Products";
+import Context from "./components/Context";
 
 function App() {
 	return (
-		<BrowserRouter>
-			<Nav />
-			<Routes>
-				<Route path="/" element={<Homepage />} />
-				<Route path="/products/:id" element={<Products />} />
-				<Route path="/dashboard" element={<Dashboard />}>
-					<Route path="profile" element={<Profile />} />
-					<Route path="settings" element={<Settings />} />
-				</Route>
-				<Route path="*" element={<PageNotFound />} />
-			</Routes>
-		</BrowserRouter>
+		<>
+			<BrowserRouter>
+				<Nav />
+				<Routes>
+					<Route path="/" element={<Homepage />} />
+					<Route path="/products/:id" element={<Products />} />
+					<Route path="/dashboard" element={<Dashboard />}>
+						<Route path="profile" element={<Profile />} />
+						<Route path="settings" element={<Settings />} />
+					</Route>
+					<Route path="*" element={<PageNotFound />} />
+				</Routes>
+			</BrowserRouter>
+			<Context />
+		</>
 	);
 }
 
