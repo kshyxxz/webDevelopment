@@ -7,12 +7,14 @@ import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import Products from "./pages/Products";
 import Context from "./components/Context";
+import Map from "./components/MapExample";
 
 function App() {
 	return (
 		<>
 			<BrowserRouter>
 				<Nav />
+				<Map />
 				<Routes>
 					<Route path="/" element={<Homepage />} />
 					<Route path="/products/:id" element={<Products />} />
